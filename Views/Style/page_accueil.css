@@ -1,0 +1,394 @@
+   
+/* Réinitialisation des marges et des paddings pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général du body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Style du header */
+header {
+    background-color: #64b0e2 ; 
+    color: white; 
+    padding: 0px 0;
+}
+
+header {
+    position: relative; /* Assurez-vous d'avoir un contexte de positionnement pour les pseudo-éléments */
+    padding-bottom: 5px; /* Ajouter un padding plus important en bas de l'en-tête */
+}
+
+header::after {
+    content: ''; /* Contenu nécessaire pour les pseudo-éléments */
+    position: absolute; /* Position absolue par rapport à l'en-tête */
+    bottom: 0; /* Aligné en bas */
+    left: 0; /* Aligné à gauche */
+    width: 100%; /* Pleine largeur de l'en-tête */
+    height: 1px; /* Hauteur de la barre de délimitation */
+    background-color: #ccc; /* Couleur de la barre de délimitation */
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+header nav ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+header nav ul li a {
+    text-decoration: none;
+    color: white; 
+    padding: 8px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 700;   
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+header nav ul li a:hover {
+    border-radius: 5px;
+    color: #7F00C4;;
+}
+
+h1, h2, h3 {
+    color: #7F00C4;
+}
+
+/* Style des sous-menus */
+.sous-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+}
+
+header nav ul li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    text-align: left;
+}
+
+.sous-menu li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sous-menu li a:hover {
+    border-radius: 0;
+    color: #fff;
+}
+
+.menu-deroulant ul.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7F00C4;
+    padding: 10px 0;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.sous-menu li {
+    text-align: left;
+}
+
+.sous-menu li a {
+    color: white; 
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sous-menu li a {
+    border-radius: 0;
+}
+
+/* Style du logo */
+.logo {
+    height: 50px;
+    width: auto;
+}
+.log a:hover{
+    background-color: white;
+}
+/* Style des sections principales */
+main {
+    background-color: #fff;
+    padding: 20px;
+    min-height: 100vh; 
+}
+
+#introduction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#introduction h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#introduction p {
+    font-size: 1.2rem;
+    color: bl;
+}
+
+#featured-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#featured-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style du footer */
+footer {
+    background-color:white ;
+    color:white ;
+    text-align: center;
+    padding: 15px 0;
+    position: relative; 
+    bottom: 0px;
+    width: 100%;
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+
+footer nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour la section des top 5 musiques et livres */
+.top-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.top-musiques, .top-livres {
+    width: 45%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-musiques h3, .top-livres h3 {
+    font-size: 1.5rem;
+    color: #7F00C4;
+    margin-bottom: 10px;
+}
+
+.top-musiques ul, .top-livres ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.top-musiques ul li, .top-livres ul li {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.top-musiques ul li::before {
+    content: "🎵"; 
+    margin-right: 5px;
+}
+
+.top-livres ul li::before {
+    content: "📚"; 
+    margin-right: 5px;
+}
+
+/* Styles pour les nouvelles */
+#news {
+    margin-top: 40px;
+}
+
+#news h2 {
+    font-size: 2rem;
+    color: #7F00C4;
+}
+
+#news article {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+#news article h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#news article p {
+    font-size: 1rem;
+    color: #666;
+}
+
+#news article a {
+    color: #7F00C4;
+    text-decoration: none;
+    font-weight: bold;
+}
+#news article a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour les témoignages */
+#testimonials {
+    margin-top: 40px;
+}
+
+#testimonials h2 {
+    font-size: 2rem;
+    color: #7F00C4;
+}
+
+#testimonials blockquote {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 5px solid #7F00C4;
+    margin-bottom: 10px;
+}
+
+#testimonials blockquote p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#testimonials blockquote cite {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Styles pour la newsletter */
+#newsletter {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#newsletter h2 {
+    font-size: 2rem;
+    color: #7F00C4;
+}
+
+#newsletter form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#newsletter button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #7F00C4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles pour les réseaux sociaux */
+#social-media {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#social-media h2 {
+    font-size: 2rem;
+    color: #7F00C4;
+}
+
+#social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#social-media ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#social-media ul li a img {
+    width: 40px;
+    height: 40px;
+}
+/* Style pour le titre h2 */
+h2 {
+    text-align: center; /* Centrez le titre horizontalement */
+    margin-bottom: 20px; /* Ajoutez une marge en bas du titre */
+  }
+  
+  /* Style pour le paragraphe auteur */
+  p {
+    text-align: center; /* Centrez le paragraphe auteur horizontalement */
+    font-style: italic; /* Mettez le texte en italique pour l'auteur */
+    margin-bottom: 10px; /* Ajoutez une marge en bas du paragraphe */
+  }
+  
+  /* Style pour l'objet PDF intégré */
+  embed {
+    width: 100%; /* Occupez toute la largeur disponible */
+    height: 600px; /* Définissez la hauteur souhaitée */
+    margin: 0 auto; /* Centrez l'objet PDF horizontalement */
+    border: 1px solid #ccc; /* Ajoutez une bordure grise */
+    padding: 10px; /* Ajoutez un espace interne autour du PDF */
+  }
+  

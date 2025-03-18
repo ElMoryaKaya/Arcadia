@@ -1,0 +1,251 @@
+
+header {
+    position: relative; 
+    padding-bottom: 5px;
+  }
+  
+  header::after {
+    content: '';
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    height: 1px; 
+    background-color: #ccc; 
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /*Logo*/
+  .logo-arcadia {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .logo_text {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+    font-size: 22px;
+    margin-right: 20px; 
+  }
+  
+  /*Barre de recherche*/
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .search-container {
+    position: relative;
+    width: auto; 
+  }
+  
+  #search {
+    width: 360px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px; 
+    background-color: #e0e0e0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 16px;
+  }
+  
+  #search:hover {
+    border: 2px solid #7F00C4;
+   }
+  
+  .search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    color: black;
+  }
+  
+  .search-button:hover i {
+    color: #333;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .button_albums {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 15px;
+    padding: 9px 16px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white; 
+    color: black; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .button_albums:hover {
+    background-color: #ccc; 
+  }
+  
+  .button_playlist {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 15px;
+    padding: 9px 16px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: #7F00C4; 
+    color: white; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  body {
+    background-color: #fff;
+  }
+  
+   /* Container for the genres */
+  .genres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  /* Individual genre container */
+  .genre-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; 
+  }
+  
+  .genre-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Genre link */
+  .genre-container a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  
+  /* Style for genre images */
+  .genre-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Dark overlay */
+  .genre-container a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+  }
+  
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+  
+  .genre-container p {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    color: white;
+    font-size: 22px; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.2; 
+  }
+  .albums-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .album-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .album-container:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
+  
+  .album-container:nth-child(even) {
+    background-color: #d0d0d0;
+  }
+  
+  .album-container:hover {
+    background-color: #c0c0c0;
+  }
+  
+  .album-image {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
